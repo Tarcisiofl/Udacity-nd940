@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/navigation"
+            app:startDestination="@id/titleFragment">
+
+    <fragment
+        android:id="@+id/titleFragment"
+        android:name="br.com.tarcisiofl.triviagame.TitleFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_title">
+        <action
+            android:id="@+id/action_titleFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameFragment"
+        android:name="br.com.tarcisiofl.triviagame.GameFragment"
+        android:label="@string/android_trivia"
+        tools:layout="@layout/fragment_game">
+        <action
+            android:id="@+id/action_gameFragment_to_gameOverFragment"
+            app:destination="@id/gameOverFragment"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/gameFragment"
+            app:enterAnim="@anim/fade_in"
+            app:exitAnim="@anim/fade_out"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/action_gameFragment_to_gameWonFragment"
+            app:destination="@id/gameWonFragment"
+            app:popUpTo="@id/gameFragment"
+            app:popUpToInclusive="true"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_right"
+            app:popExitAnim="@anim/slide_out_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameOverFragment"
+        android:name="br.com.tarcisiofl.triviagame.GameOverFragment"
+        android:label="@string/game_over"
+        tools:layout="@layout/fragment_game_over">
+        <action
+            android:id="@+id/action_gameOverFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/titleFragment"
+            app:enterAnim="@anim/slide_in_left"
+            app:exitAnim="@anim/slide_out_right"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameWonFragment"
+        android:name="br.com.tarcisiofl.triviagame.GameWonFragment"
+        android:label="@string/congratulations"
+        tools:layout="@layout/fragment_game_won">
+        <action
+            android:id="@+id/action_gameWonFragment_to_gameFragment"
+            app:destination="@id/gameFragment"
+            app:popUpTo="@id/titleFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <argument
+            android:name="numQuestions"
+            app:argType="integer" />
+        <argument
+            android:name="numCorrect"
+            app:argType="integer" />
+    </fragment>
+    <fragment
+        android:id="@+id/aboutFragment"
+        android:name="br.com.tarcisiofl.triviagame.AboutFragment"
+        android:label="@string/title_about_trivia"
+        tools:layout="@layout/fragment_about" />
+    <fragment
+        android:id="@+id/rulesFragment"
+        android:name="br.com.tarcisiofl.triviagame.RulesFragment"
+        android:label="@string/rules"
+        tools:layout="@layout/fragment_rules" />
+</navigation>

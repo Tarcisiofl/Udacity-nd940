@@ -1,0 +1,15 @@
+<resources>
+    <string name="app_name">About Me</string>
+    <string name="name">Tarcisio Lima</string>
+    <string name="yellow_star">Yellow Star</string>
+
+    <string name="bio">Tarcisio Lima is a 28-year-old trainee doctor whose life is dominated by solving the murder of his half brother, Marion Mccarthy. Marion was suffocated in 2015 and the killer was never brought to justice.
+        \n\nHe is a Brazilian Jedi who defines himself as straight. He has a degree in medicine.
+        \n\nPhysically, Tarcisio is in pretty good shape. He is average-height with cocao skin, black hair and blue eyes.
+        \n\nHe grew up in a working class neighbourhood. Having never really known his parents, he was raised in a series of foster homes.
+        \n\nHe is currently single. His most recent romance was with an electrician called Rory Rita Howard, who was 19 years older than him. They broke up because Rory couldn\'t deal with Tarcisio\'s obsession with Marion\'s death.
+        \n\nTarcisio\'s best friend is a trainee doctor called Luke Stanley. They have a very firey friendship. He also hangs around with Nellie Lawson and Lauren Morton. They enjoy looking for clues together.
+    </string>
+    <string name="what_is_your_nickname">What is your Nickname?</string>
+    <string name="done">Done</string>
+</resources>
