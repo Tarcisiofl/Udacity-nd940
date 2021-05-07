@@ -16,17 +16,21 @@
 
 package br.com.tarcisiofl.trackmysleepquality
 
+import androidx.arch.core.executor.testing.InstantTaskExecutorRule
 import androidx.room.Room
 import androidx.test.ext.junit.runners.AndroidJUnit4
 import androidx.test.platform.app.InstrumentationRegistry
 import br.com.tarcisiofl.trackmysleepquality.database.SleepDatabase
 import br.com.tarcisiofl.trackmysleepquality.database.SleepDatabaseDao
 import br.com.tarcisiofl.trackmysleepquality.database.SleepNight
+import br.com.tarcisiofl.trackmysleepquality.util.getOrAwaitValue
 import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
+import org.junit.Rule
 import org.junit.Test
+import org.junit.rules.TestRule
 import org.junit.runner.RunWith
 import java.io.IOException
 
@@ -41,6 +45,9 @@ class SleepDatabaseTest {
 
     private lateinit var sleepDao: SleepDatabaseDao
     private lateinit var db: SleepDatabase
+
+    @get:Rule
+    var rule: TestRule = InstantTaskExecutorRule()
 
     @Before
     fun createDb() {
@@ -62,11 +69,56 @@ class SleepDatabaseTest {
 
     @Test
     @Throws(Exception::class)
-    suspend fun insertAndGetNight() {
+    fun insertAndGetNight() = runBlocking {
         val night = SleepNight()
         sleepDao.insert(night)
         val tonight = sleepDao.getTonight()
         assertEquals(tonight?.sleepQuality, -1)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun updateAndGetNight() = runBlocking {
+        val night = SleepNight()
+        sleepDao.insert(night)
+
+        val tonight = sleepDao.getTonight()
+        tonight?.let {
+            it.sleepQuality = 5
+            sleepDao.update(it)
+        }
+        assertEquals(tonight?.sleepQuality, 5)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun insertAndGetAllNight() = runBlocking {
+        val nights: List<SleepNight> = listOf(SleepNight(), SleepNight(), SleepNight(), SleepNight())
+        nights.forEach { night -> sleepDao.insert(night) }
+        val dataBaseNights = sleepDao.getAllNights().getOrAwaitValue()
+        assertEquals(dataBaseNights.size, 4)
+    }
+
+    @Test
+    @Throws(Exception::class)
+    fun insertAndGet() = runBlocking {
+        var night = SleepNight()
+        sleepDao.insert(night)
+        night = sleepDao.getTonight() ?: night
+
+        val lastInsert = sleepDao.get(night.nightId)
+        assertEquals(night.nightId, lastInsert?.nightId)
+    }
+
+
+    @Test
+    @Throws(Exception::class)
+    fun clear() = runBlocking {
+        val nights: List<SleepNight> = listOf(SleepNight(), SleepNight(), SleepNight(), SleepNight())
+        nights.forEach { night -> sleepDao.insert(night) }
+        sleepDao.clear()
+        val emptyTable = sleepDao.getAllNights().getOrAwaitValue()
+        assertEquals(emptyTable.size, 0)
     }
 }
 
