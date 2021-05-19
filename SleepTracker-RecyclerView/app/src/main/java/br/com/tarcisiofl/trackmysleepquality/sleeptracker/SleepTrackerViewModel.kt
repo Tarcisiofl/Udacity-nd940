@@ -17,15 +17,11 @@
 package br.com.tarcisiofl.trackmysleepquality.sleeptracker
 
 import android.app.Application
-import androidx.lifecycle.AndroidViewModel
-import androidx.lifecycle.LiveData
-import androidx.lifecycle.MutableLiveData
-import androidx.lifecycle.Transformations
+import androidx.lifecycle.*
 import br.com.tarcisiofl.trackmysleepquality.database.SleepDatabaseDao
 import br.com.tarcisiofl.trackmysleepquality.database.SleepNight
 import br.com.tarcisiofl.trackmysleepquality.formatNights
 import kotlinx.coroutines.*
-import androidx.lifecycle.viewModelScope
 
 /**
  * ViewModel for SleepTrackerFragment.
