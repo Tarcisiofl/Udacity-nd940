@@ -20,8 +20,17 @@ package br.com.tarcisiofl.marsrealestate
 import android.widget.ImageView
 import androidx.core.net.toUri
 import androidx.databinding.BindingAdapter
+import androidx.recyclerview.widget.RecyclerView
+import br.com.tarcisiofl.marsrealestate.network.MarsProperty
+import br.com.tarcisiofl.marsrealestate.overview.PhotoGridAdapter
 import com.bumptech.glide.Glide
 import com.bumptech.glide.request.RequestOptions
+
+@BindingAdapter("listData")
+fun bindRecyclerView(recyclerView: RecyclerView, data: List<MarsProperty>?) {
+    val adapter = recyclerView.adapter as PhotoGridAdapter
+    adapter.submitList(data)
+}
 
 @BindingAdapter("imageUrl")
 fun bindImage(imgView: ImageView, imgUrl: String?) {
