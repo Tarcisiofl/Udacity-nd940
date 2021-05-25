@@ -17,6 +17,7 @@
 
 package br.com.tarcisiofl.devbyteviewer.network
 
+import br.com.tarcisiofl.devbyteviewer.database.DatabaseVideo
 import br.com.tarcisiofl.devbyteviewer.domain.Video
 import com.squareup.moshi.JsonClass
 
@@ -62,4 +63,15 @@ fun NetworkVideoContainer.asDomainModel(): List<Video> {
                 updated = it.updated,
                 thumbnail = it.thumbnail)
     }
+}
+
+fun NetworkVideoContainer.asDatabaseModel(): Array<DatabaseVideo> {
+    return videos.map {
+        DatabaseVideo(
+                title = it.title,
+                description = it.description,
+                url = it.url,
+                updated = it.updated,
+                thumbnail = it.thumbnail)
+    }.toTypedArray()
 }
