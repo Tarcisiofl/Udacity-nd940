@@ -18,16 +18,16 @@
   -->
 
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/nav_graph"
-    app:startDestination="@id/overviewFragment">
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            xmlns:tools="http://schemas.android.com/tools"
+            android:id="@+id/nav_graph"
+            app:startDestination="@id/overviewFragment">
 
     <fragment
         android:id="@+id/overviewFragment"
         android:name="br.com.tarcisiofl.marsrealestate.overview.OverviewFragment"
         android:label="fragment_overview"
-        tools:layout="@layout/fragment_overview" >
+        tools:layout="@layout/fragment_overview">
         <action
             android:id="@+id/action_showDetail"
             app:destination="@id/detailFragment" />
@@ -38,6 +38,9 @@
         android:name="br.com.tarcisiofl.marsrealestate.detail.DetailFragment"
         android:label="fragment_detail"
         tools:layout="@layout/fragment_detail">
+        <argument
+            android:name="selectedProperty"
+            app:argType="br.com.tarcisiofl.marsrealestate.network.MarsProperty" />
     </fragment>
 
 </navigation>
