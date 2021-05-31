@@ -18,12 +18,22 @@
 package br.com.tarcisiofl.devbyteviewer
 
 import android.app.Application
+import androidx.work.ExistingPeriodicWorkPolicy
+import androidx.work.PeriodicWorkRequestBuilder
+import androidx.work.WorkManager
+import br.com.tarcisiofl.devbyteviewer.work.RefreshDataWorker
+import kotlinx.coroutines.CoroutineScope
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
 import timber.log.Timber
+import java.util.concurrent.TimeUnit
 
 /**
  * Override application to setup background work via WorkManager
  */
 class DevByteApplication : Application() {
+
+    private val applicationScope = CoroutineScope(Dispatchers.Default)
 
     /**
      * onCreate is called before the first screen is shown to the user.
@@ -34,5 +44,25 @@ class DevByteApplication : Application() {
     override fun onCreate() {
         super.onCreate()
         Timber.plant(Timber.DebugTree())
+        delayedInit()
+    }
+
+    private fun delayedInit() {
+        applicationScope.launch {
+            setupRecurringWork()
+        }
+    }
+
+    private fun setupRecurringWork() {
+        val repeatingRequest = PeriodicWorkRequestBuilder<RefreshDataWorker>(
+                1,
+                TimeUnit.DAYS
+        ).build()
+
+        WorkManager.getInstance().enqueueUniquePeriodicWork(
+                RefreshDataWorker.WORK_NAME,
+                ExistingPeriodicWorkPolicy.KEEP,
+                repeatingRequest
+        )
     }
 }
