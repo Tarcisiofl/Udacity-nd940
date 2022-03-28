@@ -36,6 +36,9 @@ class AddGdgFragment : Fragment() {
                     Snackbar.LENGTH_SHORT // How long to display the message.
                 ).show()
                 viewModel.doneShowingSnackbar()
+
+                binding.button.text = getText(R.string.done)
+                binding.button.contentDescription = getText(R.string.submitted)
             }
         })
 
