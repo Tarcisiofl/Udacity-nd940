@@ -18,14 +18,13 @@
 package br.com.tarcisiofl.devbyteviewer.viewmodels
 
 import android.app.Application
-import androidx.lifecycle.*
+import androidx.lifecycle.AndroidViewModel
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.viewModelScope
 import br.com.tarcisiofl.devbyteviewer.database.getDatabase
-import br.com.tarcisiofl.devbyteviewer.domain.Video
-import br.com.tarcisiofl.devbyteviewer.network.Network
-import br.com.tarcisiofl.devbyteviewer.network.asDomainModel
 import br.com.tarcisiofl.devbyteviewer.repository.VideosRepository
 import kotlinx.coroutines.launch
-import java.io.IOException
 
 /**
  * DevByteViewModel designed to store and manage UI-related data in a lifecycle conscious way. This
