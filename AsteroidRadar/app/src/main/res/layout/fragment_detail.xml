@@ -7,7 +7,7 @@
 
         <variable
             name="asteroid"
-            type="br.com.tarcisiofl.asteroidradar.Asteroid" />
+            type="br.com.tarcisiofl.asteroidradar.domain.Asteroid" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
