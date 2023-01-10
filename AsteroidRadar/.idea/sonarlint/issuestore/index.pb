@@ -1,16 +1,12 @@
 
 w
 Gapp/src/main/java/br/com/tarcisiofl/asteroidradar/main/MainViewModel.kt,7\9\79efd16c64527effd0dc11d4ae9bfbb7d35d4f0d
-z
-Japp/src/main/java/br/com/tarcisiofl/asteroidradar/detail/DetailFragment.kt,e\9\e96191a3cd4ce9caa11f12fde47401831c443490
 v
 Fapp/src/main/java/br/com/tarcisiofl/asteroidradar/main/MainFragment.kt,5\9\59b8179660e68220dec5c72865cadcb6791baa48
 t
 Dapp/src/test/java/br/com/tarcisiofl/asteroidradar/ExampleUnitTest.kt,f\3\f3d50685eec0d6776e45c7f991d144ccb862affa
 ƒ
 Sapp/src/androidTest/java/br/com/tarcisiofl/asteroidradar/ExampleInstrumentedTest.kt,a\d\ad7af2d6f3eeb81a752095f84d1a57fbd88017d4
-q
-Aapp/src/main/java/br/com/tarcisiofl/asteroidradar/PictureOfDay.kt,b\2\b2131ba8dc75bc6c4bc42b76bdb13920ea5079a6
 n
 >app/src/main/java/br/com/tarcisiofl/asteroidradar/Constants.kt,7\a\7ae26ffb2570f14db1bf0b33a990c813044f5525
 t
@@ -19,26 +15,14 @@ X
 (gradle/wrapper/gradle-wrapper.properties,f\b\fbe448ebfc3eb2d4e308f6b8b043666f5b57235e
 9
 	README.md,8\e\8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
->
-app/.gitignore,5\1\51e1c5d383dfaa35e0e7e5873a0a99355a86880f
 F
 app/proguard-rules.pro,9\e\9e08934d811afe28fbc77aaa3c0d747b94348db9
-P
- app/src/main/AndroidManifest.xml,8\c\8c55c3ccc257e5907959013f99656e4c8ec3903e
 7
 gradlew,5\b\5bbfa66edb4db3c7c33c5181f43510990d3307f9
 ?
 settings.gradle,0\5\05efc8b1657769a27696d478ded1e95f38737233
 ;
 gradlew.bat,2\a\2a45a911a8f1836b0b6c5b758962572012d8f8c3
-~
-Napp/src/main/java/br/com/tarcisiofl/asteroidradar/database/DatabaseEntities.kt,5\f\5fc0fa911151fd955bd164a826416383ad58fcd8
-<
-build.gradle,f\0\f07866736216be0ee2aba49e392191aeae700a35
-A
-gradle.properties,2\a\2afbb999f001938c88fa43fc2ef52abf0f8213e4
-@
-app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164
 q
 Aapp/src/main/java/br/com/tarcisiofl/asteroidradar/MainActivity.kt,c\e\ce8fe05a9e5971636c98f1f178d8b2f0010ce051
 }
@@ -47,9 +31,3 @@ Mapp/src/main/java/br/com/tarcisiofl/asteroidradar/AsteroidRadarApplication.kt,
 Kapp/src/main/java/br/com/tarcisiofl/asteroidradar/work/RefreshDataWorker.kt,5\b\5bc8f588bacbff8d03b29f0423911a55cce0bc4b
 u
 Eapp/src/main/java/br/com/tarcisiofl/asteroidradar/api/NetworkUtils.kt,2\b\2b74d73a32ddc8ca407d73f5a39c8f70316c7cd5
-‚
-Rapp/src/main/java/br/com/tarcisiofl/asteroidradar/repository/AsteroidRepository.kt,9\5\953913e5cf47dbacdb2a37575815e2bf06ce352f
-r
-Bapp/src/main/java/br/com/tarcisiofl/asteroidradar/database/Room.kt,5\0\506503a33f2e979f3fbbbca02ca26ccf54aac353
-t
-Dapp/src/main/java/br/com/tarcisiofl/asteroidradar/domain/Asteroid.kt,9\f\9f8df5445ea8e250be2c1460d132dc7bb366fd94

@@ -1,6 +1,8 @@
 package br.com.tarcisiofl.asteroidradar.network
 
 import br.com.tarcisiofl.asteroidradar.BuildConfig
+import br.com.tarcisiofl.asteroidradar.PictureOfDay
+import br.com.tarcisiofl.asteroidradar.domain.Asteroid
 import com.jakewharton.retrofit2.adapter.kotlin.coroutines.CoroutineCallAdapterFactory
 import com.squareup.moshi.Moshi
 import com.squareup.moshi.kotlin.reflect.KotlinJsonAdapterFactory
@@ -15,15 +17,16 @@ import retrofit2.http.Query
  */
 interface NasaService {
     @GET("neo/rest/v1/feed")
-    fun getAsteroidslist(
-        @Query("start_date") date: String,
+    fun getAsteroidsListAsync(
+        @Query("start_date") startDate: String,
+        @Query("end_date") endDate: String? = null,
         @Query("api_key") key: String = BuildConfig.APIKEY
-    ): Deferred<>
+    ): Deferred<Asteroid>
 
     @GET("planetary/apod")
-    fun getPictureOfTheDay(
+    fun getPictureOfTheDayAsync(
         @Query("api_key") key: String = BuildConfig.APIKEY
-    ): Deferred<>
+    ): Deferred<PictureOfDay>
 }
 
 /**
@@ -45,5 +48,5 @@ object Network {
         .addCallAdapterFactory(CoroutineCallAdapterFactory())
         .build()
 
-    val nasa = retrofit.create(NasaService::class.java)
+    val nasa: NasaService = retrofit.create(NasaService::class.java)
 }

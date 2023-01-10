@@ -22,7 +22,7 @@
 
         <argument
             android:name="selectedAsteroid"
-            app:argType="br.com.tarcisiofl.asteroidradar.Asteroid"/>
+            app:argType="br.com.tarcisiofl.asteroidradar.domain.Asteroid"/>
     </fragment>
 
 </navigation>

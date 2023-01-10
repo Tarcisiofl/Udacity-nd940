@@ -25,7 +25,7 @@ fun getDatabase(context: Context): AsteroidsDatabase {
             INSTANCE = Room.databaseBuilder(
                 context.applicationContext,
                 AsteroidsDatabase::class.java,
-                "videos"
+                "asteroids"
             ).build()
         }
     }

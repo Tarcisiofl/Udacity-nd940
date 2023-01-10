@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="issues">
+    <option name="index">
+      <map>
+        <entry key="/Dummy.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/.gitignore">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/AndroidManifest.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/br/com/tarcisiofl/asteroidradar/detail/DetailFragment.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/br/com/tarcisiofl/asteroidradar/network/Service.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/java/br/com/tarcisiofl/asteroidradar/repository/AsteroidRepository.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/app/src/main/res/navigation/main_nav_graph.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/gradle.properties">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/app/build.gradle">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/main/java/br/com/portoseguro/easycar/presentation/callcenter/EasyCarCallCenterEvent.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/main/java/br/com/portoseguro/easycar/presentation/callcenter/EasyCarCallCenterState.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/main/java/br/com/portoseguro/easycar/presentation/callcenter/EasyCarCallCenterViewModel.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/main/res/layout/easy_car_home_empty.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/main/res/values/strings.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/test/java/br/com/portoseguro/easycar/data/repository/EasyCarRepositoryTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/easycar/src/test/java/br/com/portoseguro/easycar/presentation/home/EasyCarCardViewModelTest.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/auto/module_overrides.txt">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/design-system/designsystem/src/main/res/layout/view_product_item_header.xml">
+          <value>
+            <set />
+          </value>
+        </entry>
+        <entry key="$PROJECT_DIR$/../../meu-mundo-porto-seguro/home/home/src/main/java/br/com/portoseguro/superapp/home/enum/HomeFeatureToggleKeys.kt">
+          <value>
+            <set />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>
